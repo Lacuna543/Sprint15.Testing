@@ -48,7 +48,6 @@ public class StudentController {
     }
 
     @GetMapping("/students/{marathon_id}/add")
-    @RequestMapping("/favicon.ico")
     public String createStudent(@RequestParam("user_id") long userId, @PathVariable("marathon_id") long marathonId) {
         logger.info("add students to marathon with id " + marathonId + " page was opened");
         studentService.addUserToMarathon(
